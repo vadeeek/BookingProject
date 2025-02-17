@@ -1,8 +1,9 @@
 import datetime
-from datetime import timedelta
+from datetime import timedelta, date
 from core.clients.api_client import APIClient
 import pytest
 from faker import Faker
+
 
 @pytest.fixture(scope='session')
 def api_client():
@@ -13,7 +14,7 @@ def api_client():
 
 @pytest.fixture()
 def booking_dates():
-    today = datetime.today()
+    today = date.today()
     checking_date = today + timedelta(days=10)
     checkout_date = checking_date + timedelta(days=5)
 
