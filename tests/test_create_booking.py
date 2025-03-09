@@ -119,3 +119,5 @@ def test_create_booking_with_unexpected_fields(api_client, generate_random_booki
     with allure.step('Checking status code'):
         response.raise_for_status()
         assert response.status_code == 200, f'Expected status 200 but got {response.status_code}'
+
+
